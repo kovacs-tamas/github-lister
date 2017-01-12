@@ -6,8 +6,7 @@ export const REPO_FETCH = 'REPO_FETCH';
 
 export function fetchRepos(user) {
 
-    const url = `${GITHUB_URL}/${user}/repos`;
-    const request = axios.get(url);
+    const request = axios.get(`${GITHUB_URL}/${user}/repos`);
 
     return {
         type: REPO_FETCH,
